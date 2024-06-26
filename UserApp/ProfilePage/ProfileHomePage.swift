@@ -352,20 +352,6 @@ struct Userdetails: View {
                                     .cornerRadius(11)
                                     .frame(width: 20,height: 20)
                             })
-//                            .alert(isPresented: $popscreen) {
-//                                
-//                                
-//                                                            if popscreen{
-//                                                                VerifyEmailPopUp()
-//                                                            }
-////                                
-////                                        Alert(
-////                                            title: Text("Alert Title"),
-////                                            message: Text("This is the alert message."),
-////                                            primaryButton: .default(Text("OK")),
-////                                            secondaryButton: .cancel()
-////                                        )
-//                                    }
 
                             Spacer()
                                 .frame(height: 95)

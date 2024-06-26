@@ -16,11 +16,12 @@ struct VerifyEmailPopUp: View {
                 VStack{
                         Image("ic_email_New")
                             .resizable()
-                        .frame(width: 80,height: 85)
+                        .frame(width: 90,height: 85)
+                        .padding(.top,10)
                         .background(
                         Rectangle()
                             .foregroundColor(.accentColor)
-                            .frame(width: UIScreen.main.bounds.width,height: 100)
+                            .frame(width: UIScreen.main.bounds.width,height: 140)
                         )
                     Spacer()
                         .frame(height: 25)
@@ -37,10 +38,11 @@ struct VerifyEmailPopUp: View {
                         }, label: {
                             HStack {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 10)
+                                    RoundedRectangle(cornerRadius: 5)
                                         .stroke(style: StrokeStyle(lineWidth: 2))
                                         .foregroundColor(.accentColor)
                                         .foregroundColor(.white)
+                                        .frame(height: 40)
                                         
                                     Text("CANCEL")
                                         .font(.custom("Roboto-Bold", size: 20))
@@ -55,9 +57,9 @@ struct VerifyEmailPopUp: View {
                         }, label: {
                             HStack {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 10)
+                                    RoundedRectangle(cornerRadius: 5)
                                         .foregroundColor(.accentColor)
-                                       
+                                        .frame(height: 40)
                                         
                                     Text("CONTINUE")
                                         .font(.custom("Roboto-Bold", size: 20))
@@ -70,7 +72,8 @@ struct VerifyEmailPopUp: View {
                     }
                 }
                 .fixedSize(horizontal: false, vertical: true)
-                .padding([.leading,.trailing,.bottom],20)
+                .padding([.leading,.trailing],20)
+                .padding(.bottom,5)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .shadow(radius: 10)

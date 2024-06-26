@@ -5,6 +5,7 @@ struct WalletHomePage: View {
     @State private var addMoneySheet = false
     @State private var transferMOneySheet = false
     @State private var transactionSheet = false
+    @State private var contactusSheet = false
     @State private var selectedButton: String? = "All"
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -83,11 +84,14 @@ struct WalletHomePage: View {
                                                             TransactionView()
                                                         })
                                                         Button(action: {
-                                                            
+                                                            contactusSheet.toggle()
                                                         }, label: {
                                                             Image("ic_contact_new")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
+                                                        })
+                                                        .fullScreenCover(isPresented: $contactusSheet, content: {
+                                                            ContactUsView()
                                                         })
                                                     }
                                                     .frame(maxWidth: .infinity)
