@@ -4,6 +4,7 @@ import SwiftUI
 struct WalletHomePage: View {
     @State private var addMoneySheet = false
     @State private var transferMOneySheet = false
+    @State private var transactionSheet = false
     @State private var selectedButton: String? = "All"
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -71,14 +72,16 @@ struct WalletHomePage: View {
                                                                                                         }
                                                         
                                                         Button(action: {
-                                                            TransactionView()
+                                                            transactionSheet.toggle()
                                                             
                                                         }, label: {
                                                             Image("ic_wallet_transaction")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
                                                         })
-                                                        
+                                                        .fullScreenCover(isPresented: $transactionSheet, content: {
+                                                            TransactionView()
+                                                        })
                                                         Button(action: {
                                                             
                                                         }, label: {

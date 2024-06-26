@@ -84,7 +84,7 @@ struct TransactionView: View {
 
 struct TransactionViewTopView: View {
     @Binding var selectedTab: String
-    
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -95,6 +95,7 @@ struct TransactionViewTopView: View {
                         .overlay(
                             HStack {
                                 Button(action: {
+                                    presentationMode.wrappedValue.dismiss()
                                 }, label: {
                                     Image(systemName: "arrow.left")
                                         .resizable()

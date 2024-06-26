@@ -11,7 +11,7 @@ struct BookingHomeMainUI: View {
             Color.colorEDEDED
                 .ignoresSafeArea(.all)
             VStack {
-                TopVie2(selectedTab: $selectedTab)
+                TopVie2(selectedTab: $selectedTab, isPresenting: $isPresenting)
                 HStack {
                     Spacer()
                     Text("Past")
@@ -91,7 +91,7 @@ struct BookingHomeMainUI: View {
 }
 struct TopVie2: View {
     @Binding var selectedTab: String
-    
+    @Binding var isPresenting: Bool
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -109,12 +109,13 @@ struct TopVie2: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                 Spacer()
                                 Button(action: {
+                                    isPresenting.toggle()
                                 }, label: {
-                                    Image(systemName: "line.3.horizontal")
+                                    Image("ic_providerlist_adjust")
                                         .resizable()
                                         .renderingMode(.template)
                                         .foregroundColor(.white)
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 25, height: 25)
                                         .padding(.top, 20)
                                         .padding(.trailing, 20)
                                 })
