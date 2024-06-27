@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddMoneyPage: View {
-    @State private var price: Double = 0.00
+    @StateObject private var viewModel = AddMoneyViewModel()
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
@@ -26,14 +26,14 @@ struct AddMoneyPage: View {
                     .foregroundColor(.gray)
                 
                 Spacer().frame(height: 20)
-                PriceIncrementView(price: $price)
+                PriceIncrementView(viewModel: viewModel)
                 
                 Text("BSD")
                     .font(.custom("Poppins-Regular", size: 18))
                     .foregroundColor(.gray)
                     .padding(.top, -25)
                 
-                PriceSelectionView(price: $price)
+                PriceSelectionView(price: $viewModel.price)
                
                 Spacer().frame(height: 20)
                 Button(action: {
@@ -72,14 +72,11 @@ struct AddMoneyPage: View {
 
 
 struct PriceIncrementView: View {
-    @Binding var price: Double
+    @ObservedObject var viewModel: AddMoneyViewModel
     var body: some View {
         HStack{
             Button(action: {
-                if price > 0 {
-                price -= 1.00
-              }
-                
+                viewModel.decrementPrice(by: 1.00)
             }, label: {
                 Image("ic_minusmoney")
                     .renderingMode(.template)
@@ -89,12 +86,12 @@ struct PriceIncrementView: View {
             })
             Spacer().frame(width: 60)
             
-            Text(String(format: "%.2f", price))
+            Text(String(format: "%.2f", viewModel.price))
                 .font(.custom("Poppins-Regular", size: 30))
             
             Spacer().frame(width: 60)
             Button(action: {
-                price += 1.00
+                viewModel.price += 1.00
             }, label: {
                 Image("ic_addmoney")
                     .renderingMode(.template)
@@ -112,7 +109,7 @@ struct PriceSelectionView: View {
     var body: some View {
         HStack{
             Button(action: {
-                price += 10.00
+                price = 10.00
             }, label: {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(Color(red: 0.891, green: 0.891, blue: 0.891))
@@ -130,7 +127,7 @@ struct PriceSelectionView: View {
             
             Spacer().frame(width: 20)
             Button(action: {
-                price += 15.00
+                price = 15.00
             }, label: {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(Color(red: 0.891, green: 0.891, blue: 0.891))
@@ -148,7 +145,7 @@ struct PriceSelectionView: View {
             
             Spacer().frame(width: 20)
             Button(action: {
-                price += 20.00
+                price = 20.00
             }, label: {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundColor(Color(red: 0.891, green: 0.891, blue: 0.891))

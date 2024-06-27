@@ -43,12 +43,12 @@ struct HomePage: View {
                                 })
                                 Spacer()
                             }
-                            .padding(.leading,20)
-                            .padding(.top,50)
+                            .padding(.leading,50)
+                            .padding(.top,40)
                         }
                 }
                 .edgesIgnoringSafeArea(.top)
-                .frame(width: UIScreen.main.bounds.width, height: 40)
+                .frame(width: UIScreen.main.bounds.width, height: 50)
                 ScrollView(showsIndicators: false) {
                     //MARK: - swipe image
                     VStack(spacing: 0){
@@ -86,9 +86,9 @@ struct HomePage: View {
                         .offset(y: -20)
                         
                         ZStack{
-                            RoundedRectangle(cornerRadius: 5)
+                            RoundedRectangle(cornerRadius: 10)
                                 .foregroundColor(.white)
-                                .frame(height: 41)
+                                .frame(height: 40)
                                 .overlay(
                                     HStack{
                                         Image("ic_search")
@@ -98,13 +98,14 @@ struct HomePage: View {
                                             .frame(width: 25,height: 25)
                                         
                                         TextField("Search Service", text: $Search)
-                                            .font(.custom("Poppins-Semibold", size: 18))
+                                            .font(.custom("Roboto-Semibold", size: 18))
+                                            
                                     }
                                         .padding(.leading,10)
                                 )
                         }
                         .padding([.leading,.trailing],20)
-                        .offset(y: -200)
+                        .offset(y: -225)
                         //MARK: - category tables
                         VStack{
                             HStack {
@@ -181,8 +182,10 @@ struct HomePage: View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: 20) {
                                         ForEach(deliveryList.indices, id: \.self) { index in
-                                            ServiceCellUI(serviceDatas: deliveryList[index])
-                                                .padding(.leading, index == 0 ? 120 : 0)
+                                            NavigationLink(destination: index == 0 ? AnyView(ParcelDeliveryView()) : AnyView(ServiceCellUI(serviceDatas: deliveryList[index]))) {
+                                                ServiceCellUI(serviceDatas: deliveryList[index])
+                                       .padding(.leading, index == 0 ? 120 : 0)
+                                                                                    }
                                         }
                                     }
                                 }

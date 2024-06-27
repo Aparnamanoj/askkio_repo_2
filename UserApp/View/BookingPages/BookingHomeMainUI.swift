@@ -160,15 +160,15 @@ struct TopVie2: View {
                                     Spacer().frame(width: 2)
                                     
                                     Button(action: {
-                                        selectedTab = "Bide" // Update selected tab state
+                                        selectedTab = "Bids" // Update selected tab state
                                     }) {
                                         Rectangle()
                                             .cornerRadius(20)
                                             .frame(width: geometry.size.width * 0.3, height: 40)
-                                            .foregroundColor(selectedTab == "Bide" ? .accentColor : .white)
+                                            .foregroundColor(selectedTab == "Bids" ? .accentColor : .white)
                                             .overlay(
-                                                Text("Bide")
-                                                    .foregroundColor(selectedTab == "Bide" ? .white : .black)
+                                                Text("Bids")
+                                                    .foregroundColor(selectedTab == "Bids" ? .white : .black)
                                             )
                                     }
                                     Spacer().frame(width: 18)

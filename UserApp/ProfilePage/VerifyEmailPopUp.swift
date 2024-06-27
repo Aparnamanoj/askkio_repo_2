@@ -45,7 +45,7 @@ struct VerifyEmailPopUp: View {
                                         .frame(height: 40)
                                         
                                     Text("CANCEL")
-                                        .font(.custom("Roboto-Bold", size: 20))
+                                        .font(.custom("Poppins-Bold", size: 20))
                                         .foregroundColor(.accentColor)
                                         .padding()
                                 }
@@ -62,7 +62,7 @@ struct VerifyEmailPopUp: View {
                                         .frame(height: 40)
                                         
                                     Text("CONTINUE")
-                                        .font(.custom("Roboto-Bold", size: 20))
+                                        .font(.custom("Poppins-Bold", size: 20))
                                         .foregroundColor(.white)
                                         .padding()
                                 }

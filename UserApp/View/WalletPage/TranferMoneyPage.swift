@@ -84,12 +84,11 @@ struct TranferMoneyPage: View {
                     .foregroundColor(.gray)
             })
         }
+        .frame(width: UIScreen.main.bounds.width)
     }
 }
 
-#Preview {
-    TranferMoneyPage()
-}
+
 
 struct SendMoneyOption: View {
     let title: String
@@ -116,3 +115,6 @@ struct SendMoneyOption: View {
     }
 }
 
+#Preview {
+    TranferMoneyPage()
+}

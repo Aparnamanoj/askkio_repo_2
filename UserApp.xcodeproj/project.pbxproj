@@ -68,9 +68,18 @@
 		A86CA4722C2C244200BBCBE5 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CA4712C2C244200BBCBE5 /* ContactUsView.swift */; };
 		A880F0C72C2AC7A200EB4A13 /* AddMoneyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880F0C62C2AC7A200EB4A13 /* AddMoneyPage.swift */; };
 		A89E5AE82C0DB46F00627E00 /* SplashScreenUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E5AE72C0DB46F00627E00 /* SplashScreenUI.swift */; };
+		A8A5F1092C2D3CDA00D83880 /* AddMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5F1082C2D3CDA00D83880 /* AddMoneyViewModel.swift */; };
+		A8A5F10C2C2D3F8300D83880 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5F10B2C2D3F8300D83880 /* TransactionModel.swift */; };
+		A8A5F10E2C2D3FB500D83880 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5F10D2C2D3FB500D83880 /* TransactionViewModel.swift */; };
+		A8A5F1102C2D470000D83880 /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5F10F2C2D470000D83880 /* ContactUsViewModel.swift */; };
+		A8A5F1122C2D486A00D83880 /* WalletHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5F1112C2D486A00D83880 /* WalletHomeViewModel.swift */; };
 		A8AE82BA2C2BDCF200ED7E56 /* TranferMoneyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE82B92C2BDCF200ED7E56 /* TranferMoneyPage.swift */; };
 		A8AE82BD2C2BE69A00ED7E56 /* TransferMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE82BC2C2BE69A00ED7E56 /* TransferMoneyViewModel.swift */; };
 		A8C7E4B72C117E0F00ABF5BC /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7E4B62C117E0F00ABF5BC /* ColorExtention.swift */; };
+		A8C987C52C2D5FAD00BF2548 /* ParcelDeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987C42C2D5FAD00BF2548 /* ParcelDeliveryView.swift */; };
+		A8C987C72C2D891500BF2548 /* ParceldeliveryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987C62C2D891500BF2548 /* ParceldeliveryCellView.swift */; };
+		A8C987CA2C2D8FD100BF2548 /* ParcelDeliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987C92C2D8FD100BF2548 /* ParcelDeliveryModel.swift */; };
+		A8C987CD2C2D906500BF2548 /* ParcelDeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987CC2C2D906500BF2548 /* ParcelDeliveryViewModel.swift */; };
 		A8E430362C11BB5300A31364 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430242C11BB5300A31364 /* Poppins-Bold.ttf */; };
 		A8E430372C11BB5300A31364 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430252C11BB5300A31364 /* Poppins-Light.ttf */; };
 		A8E430382C11BB5300A31364 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430262C11BB5300A31364 /* Poppins-Medium.ttf */; };
@@ -178,9 +187,18 @@
 		A86CA4712C2C244200BBCBE5 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		A880F0C62C2AC7A200EB4A13 /* AddMoneyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyPage.swift; sourceTree = "<group>"; };
 		A89E5AE72C0DB46F00627E00 /* SplashScreenUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUI.swift; sourceTree = "<group>"; };
+		A8A5F1082C2D3CDA00D83880 /* AddMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyViewModel.swift; sourceTree = "<group>"; };
+		A8A5F10B2C2D3F8300D83880 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		A8A5F10D2C2D3FB500D83880 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		A8A5F10F2C2D470000D83880 /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
+		A8A5F1112C2D486A00D83880 /* WalletHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHomeViewModel.swift; sourceTree = "<group>"; };
 		A8AE82B92C2BDCF200ED7E56 /* TranferMoneyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranferMoneyPage.swift; sourceTree = "<group>"; };
 		A8AE82BC2C2BE69A00ED7E56 /* TransferMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMoneyViewModel.swift; sourceTree = "<group>"; };
 		A8C7E4B62C117E0F00ABF5BC /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
+		A8C987C42C2D5FAD00BF2548 /* ParcelDeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParcelDeliveryView.swift; sourceTree = "<group>"; };
+		A8C987C62C2D891500BF2548 /* ParceldeliveryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParceldeliveryCellView.swift; sourceTree = "<group>"; };
+		A8C987C92C2D8FD100BF2548 /* ParcelDeliveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParcelDeliveryModel.swift; sourceTree = "<group>"; };
+		A8C987CC2C2D906500BF2548 /* ParcelDeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParcelDeliveryViewModel.swift; sourceTree = "<group>"; };
 		A8E430242C11BB5300A31364 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		A8E430252C11BB5300A31364 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		A8E430262C11BB5300A31364 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -322,6 +340,8 @@
 		A801BA182C254CD100E6C4C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8C987C82C2D8F9F00BF2548 /* ParcelDeliveryModel */,
+				A8A5F10A2C2D3F3700D83880 /* WalletModel */,
 				A81E5CDC2C2A90CA008E9D6D /* ProfileModel */,
 				A801BA612C25612900E6C4C7 /* OnboardingModel */,
 				A801BA632C25667B00E6C4C7 /* RegistrationModel */,
@@ -332,6 +352,7 @@
 		A801BA192C254CDC00E6C4C7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A8C987CB2C2D902F00BF2548 /* DeliveryViewModel */,
 				A8AE82BB2C2BE67A00ED7E56 /* WalletViewModel */,
 				A81E5CD92C2A8806008E9D6D /* ProfileViewModel */,
 				A801BA622C2563C300E6C4C7 /* OnboardingsViewModel */,
@@ -343,6 +364,7 @@
 		A801BA1A2C254D0800E6C4C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A8C987C32C2D5F8200BF2548 /* DeliveryViews */,
 				A801BA532C25565800E6C4C7 /* WalletPage */,
 				A801BA4A2C25564400E6C4C7 /* ProfilePage */,
 				A801BA232C25557A00E6C4C7 /* Onboardings */,
@@ -485,10 +507,22 @@
 			path = ProfileModel;
 			sourceTree = "<group>";
 		};
+		A8A5F10A2C2D3F3700D83880 /* WalletModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8A5F10B2C2D3F8300D83880 /* TransactionModel.swift */,
+			);
+			path = WalletModel;
+			sourceTree = "<group>";
+		};
 		A8AE82BB2C2BE67A00ED7E56 /* WalletViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				A8AE82BC2C2BE69A00ED7E56 /* TransferMoneyViewModel.swift */,
+				A8A5F1082C2D3CDA00D83880 /* AddMoneyViewModel.swift */,
+				A8A5F10D2C2D3FB500D83880 /* TransactionViewModel.swift */,
+				A8A5F10F2C2D470000D83880 /* ContactUsViewModel.swift */,
+				A8A5F1112C2D486A00D83880 /* WalletHomeViewModel.swift */,
 			);
 			path = WalletViewModel;
 			sourceTree = "<group>";
@@ -501,6 +535,31 @@
 				A801BA812C259ACE00E6C4C7 /* ServiceDatas.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8C987C32C2D5F8200BF2548 /* DeliveryViews */ = {
+			isa = PBXGroup;
+			children = (
+				A8C987C42C2D5FAD00BF2548 /* ParcelDeliveryView.swift */,
+				A8C987C62C2D891500BF2548 /* ParceldeliveryCellView.swift */,
+			);
+			path = DeliveryViews;
+			sourceTree = "<group>";
+		};
+		A8C987C82C2D8F9F00BF2548 /* ParcelDeliveryModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8C987C92C2D8FD100BF2548 /* ParcelDeliveryModel.swift */,
+			);
+			path = ParcelDeliveryModel;
+			sourceTree = "<group>";
+		};
+		A8C987CB2C2D902F00BF2548 /* DeliveryViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8C987CC2C2D906500BF2548 /* ParcelDeliveryViewModel.swift */,
+			);
+			path = DeliveryViewModel;
 			sourceTree = "<group>";
 		};
 		A8E430352C11BB5300A31364 /* fonts */ = {
@@ -761,6 +820,7 @@
 				A801BA742C258EB100E6C4C7 /* EmailAddressModel.swift in Sources */,
 				A801BA282C2555A700E6C4C7 /* CurrencySelectionUI.swift in Sources */,
 				A801BA502C25565300E6C4C7 /* EditprofileUI.swift in Sources */,
+				A8C987CA2C2D8FD100BF2548 /* ParcelDeliveryModel.swift in Sources */,
 				A801BA6A2C25788200E6C4C7 /* CreatePasswordViewModel.swift in Sources */,
 				A801BA512C25565300E6C4C7 /* ProfileHomePage.swift in Sources */,
 				A801BA682C2572E800E6C4C7 /* NumberRegistrationViewModel.swift in Sources */,
@@ -769,14 +829,18 @@
 				A801BA4F2C25565300E6C4C7 /* VerifyEmailPopUp.swift in Sources */,
 				A81E5CE02C2A916F008E9D6D /* ProfileHomePageViewModel.swift in Sources */,
 				84F733812C2AD9030083A57F /* BottomSheetViews.swift in Sources */,
+				A8C987C72C2D891500BF2548 /* ParceldeliveryCellView.swift in Sources */,
 				A801BA762C258FFA00E6C4C7 /* CountrySelectionViewModel.swift in Sources */,
 				A801BA602C255E5D00E6C4C7 /* LanguageSelectionCellViewModel.swift in Sources */,
 				A801BA5A2C25581000E6C4C7 /* CurrencySelectionViewModel.swift in Sources */,
 				A801BA552C25566F00E6C4C7 /* WalletHomePage.swift in Sources */,
+				A8C987CD2C2D906500BF2548 /* ParcelDeliveryViewModel.swift in Sources */,
 				A801BA3B2C2555EC00E6C4C7 /* NumberRegistration.swift in Sources */,
+				A8C987C52C2D5FAD00BF2548 /* ParcelDeliveryView.swift in Sources */,
 				84C378CC2C2C07F6003D8F94 /* TransactionView.swift in Sources */,
 				A801BA6C2C25797C00E6C4C7 /* EnterNameViewModel.swift in Sources */,
 				A801BA3C2C2555EC00E6C4C7 /* PrivacyPolicyUI.swift in Sources */,
+				A8A5F1102C2D470000D83880 /* ContactUsViewModel.swift in Sources */,
 				A801BA3F2C2555EC00E6C4C7 /* CountryCell.swift in Sources */,
 				A89E5AE82C0DB46F00627E00 /* SplashScreenUI.swift in Sources */,
 				84F733832C2ADFC20083A57F /* SelectTypeView.swift in Sources */,
@@ -785,6 +849,7 @@
 				A801BA1C2C254DD900E6C4C7 /* OnboardingViewModel.swift in Sources */,
 				A801BA3E2C2555EC00E6C4C7 /* ReferralCodeUI.swift in Sources */,
 				84A6B4E12BFDBC6300E46248 /* ContentView.swift in Sources */,
+				A8A5F10C2C2D3F8300D83880 /* TransactionModel.swift in Sources */,
 				A81E5CDB2C2A883D008E9D6D /* EditProfileViewModel.swift in Sources */,
 				A801BA782C25902600E6C4C7 /* CountrySelectionModel.swift in Sources */,
 				A801BA1E2C254EE700E6C4C7 /* OnboardingModel.swift in Sources */,
@@ -799,6 +864,7 @@
 				A801BA2B2C2555A700E6C4C7 /* CurrencySelectionCellUI.swift in Sources */,
 				A880F0C72C2AC7A200EB4A13 /* AddMoneyPage.swift in Sources */,
 				A801BA292C2555A700E6C4C7 /* LanguageSelectionUI.swift in Sources */,
+				A8A5F1092C2D3CDA00D83880 /* AddMoneyViewModel.swift in Sources */,
 				A801BA5E2C255E1D00E6C4C7 /* LanguageSelectionModel.swift in Sources */,
 				A801BA822C259ACE00E6C4C7 /* ServiceDatas.swift in Sources */,
 				A801BA472C25563100E6C4C7 /* HomePage.swift in Sources */,
@@ -813,6 +879,8 @@
 				A801BA462C25563100E6C4C7 /* TabHomePage.swift in Sources */,
 				A801BA372C2555EC00E6C4C7 /* CreatePasswordUI.swift in Sources */,
 				84393B212C244CBA00EE0990 /* BookingHomeMainUI.swift in Sources */,
+				A8A5F1122C2D486A00D83880 /* WalletHomeViewModel.swift in Sources */,
+				A8A5F10E2C2D3FB500D83880 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

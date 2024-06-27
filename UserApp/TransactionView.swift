@@ -1,27 +1,17 @@
-//
-//  TransactionView.swift
-//  UserApp
-//
-//  Created by admin on 26/06/24.
-//
-
 import SwiftUI
 
 struct TransactionView: View {
-    @State private var selectedTab: String = "All"
-    @State private var showSheet: Bool = false
-    @State private var isPresenting: Bool = false
-    @State private var isShowpoup: Bool = false
+    @StateObject private var viewModel = TransactionViewModel()
     
     var body: some View {
-        ZStack{
+        ZStack {
             Color.colorEDEDED
                 .ignoresSafeArea(.all)
             VStack {
-                TransactionViewTopView(selectedTab: $selectedTab)
-        
+                TransactionViewTopView(selectedTab: $viewModel.selectedTabs)
+                
                 Spacer()
-                if selectedTab == "All" {
+                if viewModel.filteredTransactions.isEmpty {
                     VStack {
                         Spacer()
                         Text("No Transaction found.")
@@ -30,61 +20,31 @@ struct TransactionView: View {
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if selectedTab == "Credit" {
-                    VStack {
-                        Spacer()
-                        Text("No Transaction found.")
-                            .font(.custom("Roboto-Regular", size: 18))
-                            .fontWeight(.regular)
-                        Spacer()
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if selectedTab == "Debit" {
-                    VStack {
-                        Spacer()
-                        Text("No Transaction found.")
-                            .font(.custom("Roboto-Regular", size: 18))
-                            .fontWeight(.regular)
-                        Spacer()
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    // Display transactions
                 }
                 Spacer()
-                
             }
             .edgesIgnoringSafeArea(.top)
-//            .overlay(
-//                BottomSheetViews(isShown: $isPresenting, cornerRadius: 12) {
-//                    SelectTypeView(isShown: $isPresenting)
-//                })
             
-            // Bottom sheet for adding new credential
-        
-            if isShowpoup {
-                ZStack{
+            if viewModel.isShowpoup {
+                ZStack {
                     Color.gray.opacity(0.5)
-                    VStack{
+                    VStack {
                         Text("hello")
-                        
                     }
                     .background(Color.white)
-                    
                 }
                 .edgesIgnoringSafeArea(.all)
-                
             }
-            
         }
-        
     }
-}
-#Preview {
-    TransactionView()
 }
 
 struct TransactionViewTopView: View {
-    @Binding var selectedTab: String
+    @Binding var selectedTab: TransactionType
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -105,7 +65,7 @@ struct TransactionViewTopView: View {
                                         .padding(.top, 20)
                                         .padding(.leading, 20)
                                 })
-
+                                
                                 Spacer().frame(width: geometry.size.width * 0.1)
                                 Text("My Transaction")
                                     .font(.custom("Roboto-Regular", size: 20))
@@ -136,43 +96,43 @@ struct TransactionViewTopView: View {
                                 HStack {
                                     Spacer().frame(width: 18)
                                     Button(action: {
-                                        selectedTab = "All" // Update selected tab state
+                                        selectedTab = .all // Update selected tab state
                                     }) {
                                         Rectangle()
                                             .cornerRadius(20)
                                             .frame(width: geometry.size.width * 0.3, height: 40)
-                                            .foregroundColor(selectedTab == "All" ? .accentColor : .white)
+                                            .foregroundColor(selectedTab == .all ? .accentColor : .white)
                                             .overlay(
                                                 Text("All")
-                                                    .foregroundColor(selectedTab == "All" ? .white : .black)
+                                                    .foregroundColor(selectedTab == .all ? .white : .black)
                                             )
                                     }
                                     Spacer().frame(width: 2)
                                     
                                     Button(action: {
-                                        selectedTab = "Credit" // Update selected tab state
+                                        selectedTab = .credit // Update selected tab state
                                     }) {
                                         Rectangle()
                                             .cornerRadius(20)
                                             .frame(width: geometry.size.width * 0.3, height: 40)
-                                            .foregroundColor(selectedTab == "Credit" ? .accentColor : .white)
+                                            .foregroundColor(selectedTab == .credit ? .accentColor : .white)
                                             .overlay(
                                                 Text("Credit")
-                                                    .foregroundColor(selectedTab == "Credit" ? .white : .black)
+                                                    .foregroundColor(selectedTab == .credit ? .white : .black)
                                             )
                                     }
                                     Spacer().frame(width: 2)
                                     
                                     Button(action: {
-                                        selectedTab = "Debit" // Update selected tab state
+                                        selectedTab = .debit // Update selected tab state
                                     }) {
                                         Rectangle()
                                             .cornerRadius(20)
                                             .frame(width: geometry.size.width * 0.3, height: 40)
-                                            .foregroundColor(selectedTab == "Debit" ? .accentColor : .white)
+                                            .foregroundColor(selectedTab == .debit ? .accentColor : .white)
                                             .overlay(
                                                 Text("Debit")
-                                                    .foregroundColor(selectedTab == "Debit" ? .white : .black)
+                                                    .foregroundColor(selectedTab == .debit ? .white : .black)
                                             )
                                     }
                                     Spacer().frame(width: 18)

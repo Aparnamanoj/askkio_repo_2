@@ -32,6 +32,7 @@ struct TabHomePage: View {
                      }
             }
         }
+       
         .navigationViewStyle(.stack)
         .navigationBarBackButtonHidden(true)
      }

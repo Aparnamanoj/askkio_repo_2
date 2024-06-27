@@ -2,11 +2,7 @@
 import SwiftUI
 
 struct WalletHomePage: View {
-    @State private var addMoneySheet = false
-    @State private var transferMOneySheet = false
-    @State private var transactionSheet = false
-    @State private var contactusSheet = false
-    @State private var selectedButton: String? = "All"
+   @StateObject private var viewModel = WalletHomeViewModel()
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack {
@@ -31,7 +27,7 @@ struct WalletHomePage: View {
                                     .font(.custom("Poppins-Regular", size: 23))
                                 Spacer()
                                     .frame(height: 5)
-                                Text("$ 0.00")
+                                Text("$ \(viewModel.balance, specifier: "%.2f")")
                                     .foregroundColor(.white)
                                     .font(.custom("Poppins-Bold", size: 45))
                                 Spacer()
@@ -46,51 +42,51 @@ struct WalletHomePage: View {
                                                 VStack {
                                                     HStack(spacing: 40) {
                                                         Button(action: {
-                                                            addMoneySheet.toggle()
+                                                            viewModel.addMoneySheet.toggle()
                                                         }, label: {
                                                             Image("ic_wallet_addmoney")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
                                                         })
-                                                        .sheet(isPresented: $addMoneySheet) {
+                                                        .sheet(isPresented: $viewModel.addMoneySheet) {
                                                             AddMoneyPage()
-                                                            .frame(width: min(UIScreen.main.bounds.width, 800))
+                                                            .frame(width: UIScreen.main.bounds.width)
                                                                .presentationDetents([.height(UIScreen.main.bounds.height - 500)])
                                                                                                         }
                                                         
                                                         
                                                         Button(action: {
-                                                            transferMOneySheet.toggle()
+                                                            viewModel.transferMOneySheet.toggle()
                                                         }, label: {
                                                             Image("ic_wallet_transfer")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
                                                         })
-                                                        .sheet(isPresented: $transferMOneySheet) {
+                                                        .sheet(isPresented: $viewModel.transferMOneySheet) {
                                                             TranferMoneyPage()
                                                             .frame(width: min(UIScreen.main.bounds.width, 800))
                                                                .presentationDetents([.height(UIScreen.main.bounds.height - 360)])
                                                                                                         }
                                                         
                                                         Button(action: {
-                                                            transactionSheet.toggle()
+                                                            viewModel.transactionSheet.toggle()
                                                             
                                                         }, label: {
                                                             Image("ic_wallet_transaction")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
                                                         })
-                                                        .fullScreenCover(isPresented: $transactionSheet, content: {
+                                                        .fullScreenCover(isPresented: $viewModel.transactionSheet, content: {
                                                             TransactionView()
                                                         })
                                                         Button(action: {
-                                                            contactusSheet.toggle()
+                                                            viewModel.contactusSheet.toggle()
                                                         }, label: {
                                                             Image("ic_contact_new")
                                                                 .resizable()
                                                                 .frame(width: 55, height: 55)
                                                         })
-                                                        .fullScreenCover(isPresented: $contactusSheet, content: {
+                                                        .fullScreenCover(isPresented: $viewModel.contactusSheet, content: {
                                                             ContactUsView()
                                                         })
                                                     }
@@ -151,13 +147,13 @@ struct WalletHomePage: View {
                                     .frame(height: 20)
                                 HStack{
                                     Button(action: {
-                                        selectedButton = "All"
+                                        viewModel.selectedButton = "All"
                                     }, label: {
                                         RoundedRectangle(cornerRadius: 15)
-                                            .fill(selectedButton == "All" ? Color(hex: "#00AAD6") : Color.white)
+                                            .fill(viewModel.selectedButton == "All" ? Color(hex: "#00AAD6") : Color.white)
                                             .overlay(
                                             Text("All")
-                                                .foregroundColor(selectedButton == "All" ? Color.white : Color.black)
+                                                .foregroundColor(viewModel.selectedButton == "All" ? Color.white : Color.black)
                                                 .font(.custom("Roboto-Bold", size: 16))
                                             )
                                             .shadow(radius: 3)
@@ -167,17 +163,17 @@ struct WalletHomePage: View {
                                     Spacer()
                                         .frame(width: 20)
                                     Button(action: {
-                                        selectedButton = "Credit"
+                                        viewModel.selectedButton = "Credit"
                                     }, label: {
                                         RoundedRectangle(cornerRadius: 20)
-                                            .fill(selectedButton == "Credit" ? Color(hex: "#00AAD6") : Color.white)
+                                            .fill(viewModel.selectedButton == "Credit" ? Color(hex: "#00AAD6") : Color.white)
                                             .overlay(
                                                 HStack{
                                                     Image("ic_credit_new")
                                                         .resizable()
                                                         .frame(width: 18,height: 18)
                                                     Text("Credit")
-                                                        .foregroundColor(selectedButton == "Credit" ? Color.white : Color.black)
+                                                        .foregroundColor(viewModel.selectedButton == "Credit" ? Color.white : Color.black)
                                                         .font(.custom("Poppins-Semibold", size: 16))
                                                 }
                                             )
@@ -189,17 +185,17 @@ struct WalletHomePage: View {
                                     Spacer()
                                         .frame(width: 20)
                                     Button(action: {
-                                        selectedButton = "Debit"
+                                        viewModel.selectedButton = "Debit"
                                     }, label: {
                                         RoundedRectangle(cornerRadius: 20)
-                                            .fill(selectedButton == "Debit" ? Color(hex: "#00AAD6") : Color.white)
+                                            .fill(viewModel.selectedButton == "Debit" ? Color(hex: "#00AAD6") : Color.white)
                                             .overlay(
                                                 HStack{
                                                     Image("ic_debit_new")
                                                         .resizable()
                                                         .frame(width: 15,height: 15)
                                                     Text("Debit")
-                                                        .foregroundColor(selectedButton == "Debit" ? Color.white : Color.black)
+                                                        .foregroundColor(viewModel.selectedButton == "Debit" ? Color.white : Color.black)
                                                         .font(.custom("Poppins-Semibold", size: 16))
                                                 }
                                             )
@@ -220,7 +216,7 @@ struct WalletHomePage: View {
                 }
                
             }
-            if addMoneySheet {
+            if viewModel.addMoneySheet {
             VisualEffectBlur(blurStyle: .systemMaterial) {
                 Color.clear
                 }
@@ -230,7 +226,7 @@ struct WalletHomePage: View {
         }
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.all)
-        .animation(.easeInOut, value: addMoneySheet)
+        .animation(.easeInOut, value: viewModel.addMoneySheet)
     }
           
 }
