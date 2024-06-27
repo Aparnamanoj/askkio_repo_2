@@ -50,10 +50,10 @@ struct BookingHomeMainUI: View {
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if selectedTab == "Bide" {
+                } else if selectedTab == "Bids" {
                     VStack {
                         Spacer()
-                        Text("No Bide found")
+                        Text("No Bids found")
                             .font(.custom("Roboto-Regular", size: 18))
                             .fontWeight(.regular)
                         Spacer()

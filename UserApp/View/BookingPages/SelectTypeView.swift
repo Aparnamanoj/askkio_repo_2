@@ -4,7 +4,7 @@ struct SelectTypeView: View {
     @Binding var isShown: Bool
     @State private var selectedButton: String? = nil
     
-    let buttons = ["in process", "upcoming", "past", "expired", "All"] // List of buttons
+    let buttons = ["In process", "Upcoming", "Past", "Expired", "All"] // List of buttons
     
     var body: some View {
         ZStack(alignment: .top) {

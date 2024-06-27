@@ -51,7 +51,7 @@ let postTaskList = [
 ]
 
 let moreOptionsList = [
-    ServiceData(id: UUID(), image: "delivery", name: "Home Food"),
+    ServiceData(id: UUID(), image: "delivery", name: "Food Delivery"),
     ServiceData(id: UUID(), image: "delivery", name: "Care Packages"),
     ServiceData(id: UUID(), image: "delivery", name: "Documents"),
     ServiceData(id: UUID(), image: "delivery", name: "Clothes"),

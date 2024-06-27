@@ -28,7 +28,7 @@ struct AddMoneyPage: View {
                 Spacer().frame(height: 20)
                 PriceIncrementView(price: $price)
                 
-                Text("XCD")
+                Text("BSD")
                     .font(.custom("Poppins-Regular", size: 18))
                     .foregroundColor(.gray)
                     .padding(.top, -25)
