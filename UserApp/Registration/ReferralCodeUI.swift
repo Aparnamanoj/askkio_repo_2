@@ -47,13 +47,21 @@ struct ReferralCodeUI: View {
                         TextField("Referral Code", text: $viewmodel.referralText)
                             .font(.custom("Poppins-Regular", size: 20))
                             .padding(.leading,30)
-                        
-                        Image("optional")
-                            .resizable()
-                            .renderingMode(.template)
-                            .foregroundColor(Color.accentColor)
-                            .frame(width: 30,height: 30)
-                            .padding(.trailing,30)
+                        Button(action: {
+                            viewmodel.referralSheet.toggle()
+                        }, label: {
+                            Image("optional")
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundColor(Color(hex: "#00AAD6"))
+                                .frame(width: 30,height: 30)
+                                .padding(.trailing,30)
+                        })
+                        .sheet(isPresented: $viewmodel.referralSheet) {
+                            ReferralInviteView()
+                            .frame(width: UIScreen.main.bounds.width)
+                               .presentationDetents([.height(UIScreen.main.bounds.height - 350)])
+                                                                        }
                     }
                     
                     Rectangle()
@@ -73,9 +81,9 @@ struct ReferralCodeUI: View {
                         HStack{
                             Spacer()
                             Circle()
-                                .fill(Color.cyan)
+                                .fill(Color(hex: "#00AAD6"))
                                 .shadow(radius: 5)
-                                .frame(width: 75, height: 75)
+                                .frame(width: 80, height: 80)
                                 .overlay(
                                     Image("nextBarButton")
                                         .renderingMode(.template)
@@ -86,7 +94,7 @@ struct ReferralCodeUI: View {
                                 )
                         }
                         .padding(.trailing,30)
-                        .padding(.bottom,35)
+                        .padding(.bottom,27)
                     }
                 }
                 Spacer()

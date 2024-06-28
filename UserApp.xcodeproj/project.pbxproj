@@ -80,6 +80,8 @@
 		A8C987C72C2D891500BF2548 /* ParceldeliveryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987C62C2D891500BF2548 /* ParceldeliveryCellView.swift */; };
 		A8C987CA2C2D8FD100BF2548 /* ParcelDeliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987C92C2D8FD100BF2548 /* ParcelDeliveryModel.swift */; };
 		A8C987CD2C2D906500BF2548 /* ParcelDeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C987CC2C2D906500BF2548 /* ParcelDeliveryViewModel.swift */; };
+		A8D1CBF02C2EB63B002F3069 /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D1CBEF2C2EB63B002F3069 /* TabBarManager.swift */; };
+		A8D1CBF42C2ED385002F3069 /* ReferralInviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D1CBF32C2ED385002F3069 /* ReferralInviteView.swift */; };
 		A8E430362C11BB5300A31364 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430242C11BB5300A31364 /* Poppins-Bold.ttf */; };
 		A8E430372C11BB5300A31364 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430252C11BB5300A31364 /* Poppins-Light.ttf */; };
 		A8E430382C11BB5300A31364 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E430262C11BB5300A31364 /* Poppins-Medium.ttf */; };
@@ -199,6 +201,8 @@
 		A8C987C62C2D891500BF2548 /* ParceldeliveryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParceldeliveryCellView.swift; sourceTree = "<group>"; };
 		A8C987C92C2D8FD100BF2548 /* ParcelDeliveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParcelDeliveryModel.swift; sourceTree = "<group>"; };
 		A8C987CC2C2D906500BF2548 /* ParcelDeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParcelDeliveryViewModel.swift; sourceTree = "<group>"; };
+		A8D1CBEF2C2EB63B002F3069 /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		A8D1CBF32C2ED385002F3069 /* ReferralInviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralInviteView.swift; sourceTree = "<group>"; };
 		A8E430242C11BB5300A31364 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		A8E430252C11BB5300A31364 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		A8E430262C11BB5300A31364 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 				A801BA2F2C2555EC00E6C4C7 /* ChooseProfileUI.swift */,
 				A801BA362C2555EC00E6C4C7 /* EmailAddressUI.swift */,
 				A801BA342C2555EC00E6C4C7 /* ReferralCodeUI.swift */,
+				A8D1CBF32C2ED385002F3069 /* ReferralInviteView.swift */,
 				A801BA352C2555EC00E6C4C7 /* CountryCell.swift */,
 				A801BA332C2555EC00E6C4C7 /* CountrySelectionUI.swift */,
 				A801BA302C2555EC00E6C4C7 /* LoginOptionsUI.swift */,
@@ -533,6 +538,7 @@
 				A8C7E4B62C117E0F00ABF5BC /* ColorExtention.swift */,
 				A85B06752C18711700D66B19 /* ProfileSettingsData.swift */,
 				A801BA812C259ACE00E6C4C7 /* ServiceDatas.swift */,
+				A8D1CBEF2C2EB63B002F3069 /* TabBarManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -819,6 +825,7 @@
 				A801BA5C2C255D8800E6C4C7 /* CurrencySelectionUiViewModel.swift in Sources */,
 				A801BA742C258EB100E6C4C7 /* EmailAddressModel.swift in Sources */,
 				A801BA282C2555A700E6C4C7 /* CurrencySelectionUI.swift in Sources */,
+				A8D1CBF02C2EB63B002F3069 /* TabBarManager.swift in Sources */,
 				A801BA502C25565300E6C4C7 /* EditprofileUI.swift in Sources */,
 				A8C987CA2C2D8FD100BF2548 /* ParcelDeliveryModel.swift in Sources */,
 				A801BA6A2C25788200E6C4C7 /* CreatePasswordViewModel.swift in Sources */,
@@ -878,6 +885,7 @@
 				A86CA4722C2C244200BBCBE5 /* ContactUsView.swift in Sources */,
 				A801BA462C25563100E6C4C7 /* TabHomePage.swift in Sources */,
 				A801BA372C2555EC00E6C4C7 /* CreatePasswordUI.swift in Sources */,
+				A8D1CBF42C2ED385002F3069 /* ReferralInviteView.swift in Sources */,
 				84393B212C244CBA00EE0990 /* BookingHomeMainUI.swift in Sources */,
 				A8A5F1122C2D486A00D83880 /* WalletHomeViewModel.swift in Sources */,
 				A8A5F10E2C2D3FB500D83880 /* TransactionViewModel.swift in Sources */,

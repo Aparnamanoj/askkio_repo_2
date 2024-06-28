@@ -11,6 +11,8 @@ import Combine
 
 class ReferralCodeViewModel: ObservableObject {
     @Published var referralText: String = ""
+    @Published var referralSheet = false
+    @Published var isShowpoup: Bool = false
     
     func submitReferralCode() {
        

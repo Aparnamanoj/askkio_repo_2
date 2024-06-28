@@ -57,7 +57,7 @@ struct ImageView: View {
                 VStack {
                     Image(viewModel.onBoardingSteps[index].image)
                         .resizable()
-                        .frame(width: 400, height: 300)
+                        .frame(width: 379, height: 227)
                 }
                 .tag(index)
             }
@@ -161,14 +161,14 @@ struct BackButtonView: View {
                     Circle()
                         .fill(Color(red: 0.285, green: 0.662, blue: 0.84))
                         .shadow(radius: 5)
-                        .frame(width: 70, height: 71)
+                        .frame(width: 80, height: 80)
                         .overlay(
                             Image("nextBarButton")
                                 .renderingMode(.template)
                                 .resizable()
                                 .foregroundColor(.white)
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
+                                .frame(width: 25, height: 25)
                         )
                 })
                 .padding(.trailing, 30)

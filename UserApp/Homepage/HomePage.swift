@@ -11,6 +11,7 @@ private let homepageSteps = [
 ]
 
 struct HomePage: View {
+   
     @State private var currentIndex = 0
     @State var offset: CGFloat = 0
     let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
@@ -34,7 +35,9 @@ struct HomePage: View {
                                     .font(.custom("Poppins-Regular", size: 15))
                                 Spacer()
                                     .frame(width: 8)
-                                Button(action: {}, label: {
+                                Button(action: {
+                                   
+                                }, label: {
                                     Image("ic_arrow_down")
                                         .renderingMode(.template)
                                         .resizable()
@@ -186,6 +189,7 @@ struct HomePage: View {
                                                 ServiceCellUI(serviceDatas: deliveryList[index])
                                        .padding(.leading, index == 0 ? 120 : 0)
                                                                                     }
+                                            .buttonStyle(PlainButtonStyle())
                                         }
                                     }
                                 }
@@ -371,6 +375,8 @@ struct HomePage: View {
                     .frame(width: UIScreen.main.bounds.width)
             }
         }
+        
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationViewStyle(.stack)
         .navigationBarBackButtonHidden(true)
         }

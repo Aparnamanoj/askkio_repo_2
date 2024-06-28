@@ -249,11 +249,11 @@ struct NavigateButtonClick: View {
                                 .fill(Color.cyan)
                                 .stroke(Color.cyan, lineWidth: 2.0)
                                 .shadow(radius: 5)
-                                .frame(width: 60, height: 60)
+                                .frame(width: 80, height: 80)
                         )
                 })
-                .padding(.trailing, 32)
-                .padding(.bottom, 0)
+                .padding(.trailing, 30)
+                .padding(.bottom, 27)
                 .disabled(!isInputValid) // Disable button based on validation state
                 .fullScreenCover(isPresented: $isNumberRegistrationPresented) {
                     CreatePasswordUI() // View to present when button is clicked

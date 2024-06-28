@@ -64,7 +64,7 @@ struct EmailAddressUI: View {
                                 Circle()
                                     .fill(Color.cyan)
                                     .shadow(radius: 5)
-                                    .frame(width: 75, height: 75)
+                                    .frame(width: 80, height: 80)
                                     .overlay(
                                         Image("nextBarButton")
                                             .renderingMode(.template)
@@ -75,7 +75,7 @@ struct EmailAddressUI: View {
                                     )
                             }
                             .padding(.trailing, 30)
-                            .padding(.bottom, 35)
+                            .padding(.bottom, 27)
                         }
                     }
                     Spacer()

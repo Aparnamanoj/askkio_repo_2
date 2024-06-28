@@ -15,11 +15,11 @@ struct ParceldeliveryCellView: View {
                 Rectangle()
                     .cornerRadius(10)
                     .foregroundColor(.white)
-                    .shadow(radius: 8)
+                    .shadow(radius: 3)
                     .frame(width: 168,height: 200)
                     .overlay(
                         VStack{
-                            Spacer().frame(height: 25)
+                            Spacer().frame(height: 20)
                             Image(paeceldata.image)
                                 .resizable()
                                 .frame(width: 60,height: 60)
@@ -37,12 +37,13 @@ struct ParceldeliveryCellView: View {
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                                 .padding([.leading,.trailing],10)
-                                .frame(height: 45)
+                                .frame(height: 65)
+                            Spacer()
                         }
                     )
             }
         }
-        .frame(height: 164)
+        .frame(height: 220)
     }
 }
 

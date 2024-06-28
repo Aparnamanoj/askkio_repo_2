@@ -89,7 +89,7 @@ struct CreatePasswordUI: View {
                                         .fill(Color.cyan)
                                         .stroke(Color.cyan, lineWidth: 2.0)
                                         .shadow(radius: 5)
-                                        .frame(width: 70, height: 70)
+                                        .frame(width: 80, height: 80)
                                         .overlay(
                                             Image("nextBarButton")
                                                 .renderingMode(.template)
@@ -99,8 +99,8 @@ struct CreatePasswordUI: View {
                                                 .frame(width: 25, height: 25)
                                         )
                                 }
-                                .padding(.trailing, 25)
-                                .padding(.bottom, 25)
+                                .padding(.trailing, 30)
+                                .padding(.bottom, 27)
                             }
                         }
                     }
